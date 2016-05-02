@@ -1,9 +1,11 @@
 {
   "name": "hass-switches",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "",
   "main": "src/main.js",
+  "bin": "./server.js",
   "dependencies": {
+    "express": "^4.13.4",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
     "react-redux": "^4.4.5",
@@ -19,8 +21,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "watch": "webpack --watch"
+    "build": "webpack && cp index.html dist/index.html",
+    "watch": "webpack --watch",
+    "prepublish": "npm run build"
   },
   "author": "",
   "license": "ISC"
