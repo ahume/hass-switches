@@ -5,6 +5,6 @@ const App = () => (
   <div>
   	<VisibleButtons />
   </div>
-)
+);
 
-export default App
+export default App;

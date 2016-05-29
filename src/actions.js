@@ -1,7 +1,6 @@
 import { updateHass, getStateFromHass } from './hass-api';
 
 export const fetchStateChange = (id, newState) => {
-	console.log('fetchStateChange')
 	return dispatch => {
 		dispatch(requestStateChange(id, 'loading'));
 	    return updateHass(id, newState)
@@ -12,7 +11,6 @@ export const fetchStateChange = (id, newState) => {
 }
 
 export const requestState = () => {
-	console.log('requestState')
 	return dispatch => {
 		return getStateFromHass()
     		.then(state => {
@@ -22,7 +20,6 @@ export const requestState = () => {
 }
 
 export const requestStateChange = (id, newState) => {
-	console.log('requestStateChange')
 	return {
 		type: 'REQUEST_CHANGE',
 		id,
@@ -31,7 +28,6 @@ export const requestStateChange = (id, newState) => {
 }
 
 export const receiveStateChange = newState => {
-	console.log('receiveStateChange', newState);
 	return {
 		type: 'RECEIVE_CHANGE',
 		success: true,

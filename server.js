@@ -9,5 +9,5 @@ var app = express();
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.listen(3000, function () {
-  console.log('hass-switches listening on port 3000!');
+  console.log('hass-switches: http://localhost:3000/index.html');
 });

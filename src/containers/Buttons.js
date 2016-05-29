@@ -5,7 +5,7 @@ import Buttons from '../components/Buttons';
 
 const mapStateToProps = (state) => {
 	return {
-		buttons: state.buttons
+		buttons: state.get('buttons')
 	}
 }
 

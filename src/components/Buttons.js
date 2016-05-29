@@ -7,13 +7,13 @@ const Buttons = ({ buttons, onButtonClick }) => (
   <div>
   	{buttons.map(button => 
   		<Button
-  			key={button.id}
-  			text={button.text}
-  			status={button.status}
-  			onClick={() => onButtonClick(button.id, toggleStatus(button.status))}
+  			key={button.get('id')}
+  			text={button.get('text')}
+  			status={button.get('status')}
+  			onClick={() => onButtonClick(button.get('id'), toggleStatus(button.get('status')))}
   		/>
   	)}
   </div>
-)
+);
 
-export default Buttons
+export default Buttons;
